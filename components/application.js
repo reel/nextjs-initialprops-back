@@ -5,6 +5,9 @@ export default Page => class Application extends React.Component {
     super(props)
     console.log('application level props', props);
   }
+  static getInitialProps(ctx) {
+    return Page.getInitialProps(ctx)
+  }
   render () {
     return (
       <div>
